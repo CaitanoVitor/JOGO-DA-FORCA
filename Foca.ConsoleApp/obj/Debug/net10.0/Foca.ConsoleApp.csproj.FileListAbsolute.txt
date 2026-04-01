@@ -1,0 +1,15 @@
+E:\C#\FORCA\Foca.ConsoleApp\bin\Debug\net10.0\Foca.ConsoleApp.exe
+E:\C#\FORCA\Foca.ConsoleApp\bin\Debug\net10.0\Foca.ConsoleApp.deps.json
+E:\C#\FORCA\Foca.ConsoleApp\bin\Debug\net10.0\Foca.ConsoleApp.runtimeconfig.json
+E:\C#\FORCA\Foca.ConsoleApp\bin\Debug\net10.0\Foca.ConsoleApp.dll
+E:\C#\FORCA\Foca.ConsoleApp\bin\Debug\net10.0\Foca.ConsoleApp.pdb
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.AssemblyInfoInputs.cache
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.AssemblyInfo.cs
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.csproj.CoreCompileInputs.cache
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.sourcelink.json
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.dll
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\refint\Foca.ConsoleApp.dll
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.pdb
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\Foca.ConsoleApp.genruntimeconfig.cache
+E:\C#\FORCA\Foca.ConsoleApp\obj\Debug\net10.0\ref\Foca.ConsoleApp.dll
