@@ -1,9 +1,5 @@
 # Jogo da Forca
 
-## Projeto
-
-Desenvolvido durante o curso Back-End da [Academia do Programador](https://www.academiadoprogramador.net) 2026
-
 ## Introdução
 
 O computador escolherá, de maneira aleatória, uma palavra entre várias possibilidades\*, e o jogador deve chutar, letra por letra, até adivinhá-la.
