@@ -1,23 +1,54 @@
-﻿string palavraAleatoria = "ABACATE";
+﻿string palavraSecreta = "ABACATE";
 
 
-char[] letrasCorretas = new char[7];
+char[] letraCorreta = new char[7];
 
-for (int contadorDeLetras = 0; contadorDeLetras < 7; contadorDeLetras++)
+for (int contadorLetras = 0; contadorLetras < 7; contadorLetras++)
 {
-    letrasCorretas[contadorDeLetras] = '_';
-    Console.Write(letrasCorretas[contadorDeLetras]);
+    letraCorreta[contadorLetras] = '_';
 }
-Console.ReadLine();
+
+int contadorDeErros = 0;
 
 bool jogadorAcertou = false;
 
 while (!jogadorAcertou)
 {
     Console.Clear();
-    Console.WriteLine("Digite uma Letra: ");
-    char letra = Convert.ToChar(Console.ReadLine());
+    Console.WriteLine("---------------------------------------");
+    Console.WriteLine("JOGO DA FORCA");
+    Console.WriteLine("---------------------------------------");
+    Console.WriteLine("Erros cometidos: " + contadorDeErros + " Erros");
+    Console.Write("CHUTES: ");
 
-    Console.WriteLine(letra);
-    Console.ReadLine();
+    for (int contadorLetras = 0; contadorLetras < 7; contadorLetras++)
+    {
+        Console.Write(letraCorreta[contadorLetras]);
+    }
+
+    Console.WriteLine("\n---------------------------------------");
+    Console.Write("DIGITE UMA LETRA: ");
+    char chute = Convert.ToChar(Console.ReadLine());
+
+    for (int contadorPalavraCorreta = 0; contadorPalavraCorreta < palavraSecreta.Length; contadorPalavraCorreta++)
+    {
+
+        char letraCorretaAtual = palavraSecreta[contadorPalavraCorreta];
+
+        if (chute == letraCorretaAtual)
+        {
+            letraCorreta[contadorPalavraCorreta] = chute;
+        }
+    }
+
+    string letrasCorretasCompletas = string.Join("", letraCorreta);
+
+    if (palavraSecreta == letrasCorretasCompletas)
+    {
+        jogadorAcertou = true;
+        Console.WriteLine($"Parabens, VOCÊ ACERTOU! A Palavra secreta era: {palavraSecreta}");
+    }
+
 }
+
+Console.ReadLine();
