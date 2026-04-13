@@ -11,8 +11,9 @@ for (int contadorLetras = 0; contadorLetras < 7; contadorLetras++)
 int contadorDeErros = 0;
 
 bool jogadorAcertou = false;
+bool jogadorPerdeu = false;
 
-while (!jogadorAcertou)
+while (!jogadorAcertou && !jogadorPerdeu)
 {
     Console.Clear();
     Console.WriteLine("---------------------------------------");
@@ -30,6 +31,8 @@ while (!jogadorAcertou)
     Console.Write("DIGITE UMA LETRA: ");
     char chute = Convert.ToChar(Console.ReadLine());
 
+    bool letraFoiEncontrada = false;
+
     for (int contadorPalavraCorreta = 0; contadorPalavraCorreta < palavraSecreta.Length; contadorPalavraCorreta++)
     {
 
@@ -38,7 +41,13 @@ while (!jogadorAcertou)
         if (chute == letraCorretaAtual)
         {
             letraCorreta[contadorPalavraCorreta] = chute;
+            letraFoiEncontrada = true;
         }
+    }
+
+    if (!letraFoiEncontrada)
+    {
+        contadorDeErros++;
     }
 
     string letrasCorretasCompletas = string.Join("", letraCorreta);
@@ -48,7 +57,13 @@ while (!jogadorAcertou)
         jogadorAcertou = true;
         Console.WriteLine($"Parabens, VOCÊ ACERTOU! A Palavra secreta era: {palavraSecreta}");
     }
+if (contadorDeErros > 5)
+{
+    jogadorPerdeu = true;
+    Console.WriteLine($"Que Pena, você ERROU! a palavra correta era: {palavraSecreta}");
+}
 
 }
 
+Console.WriteLine("Digite ENTER PARA SAIR...");
 Console.ReadLine();

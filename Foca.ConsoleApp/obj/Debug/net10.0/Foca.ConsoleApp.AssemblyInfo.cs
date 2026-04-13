@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Foca.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0c6bd446741c2dd12cd0d37bb5c84381aa74634")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+310216728e43201474e274568a15659ffd242f27")]
 [assembly: System.Reflection.AssemblyProductAttribute("Foca.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Foca.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
