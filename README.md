@@ -1,4 +1,5 @@
 # Jogo da Forca
+![](./.docs/rRMW3Js.gif)
 
 ## Introdução
 
