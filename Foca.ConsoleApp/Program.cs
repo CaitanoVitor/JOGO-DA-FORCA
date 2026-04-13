@@ -1,23 +1,69 @@
-﻿string palavraAleatoria = "ABACATE";
+﻿string palavraSecreta = "ABACATE";
 
 
-char[] letrasCorretas = new char[7];
+char[] letraCorreta = new char[7];
 
-for (int contadorDeLetras = 0; contadorDeLetras < 7; contadorDeLetras++)
+for (int contadorLetras = 0; contadorLetras < 7; contadorLetras++)
 {
-    letrasCorretas[contadorDeLetras] = '_';
-    Console.Write(letrasCorretas[contadorDeLetras]);
+    letraCorreta[contadorLetras] = '_';
 }
-Console.ReadLine();
+
+int contadorDeErros = 0;
 
 bool jogadorAcertou = false;
+bool jogadorPerdeu = false;
 
-while (!jogadorAcertou)
+while (!jogadorAcertou && !jogadorPerdeu)
 {
     Console.Clear();
-    Console.WriteLine("Digite uma Letra: ");
-    char letra = Convert.ToChar(Console.ReadLine());
+    Console.WriteLine("---------------------------------------");
+    Console.WriteLine("JOGO DA FORCA");
+    Console.WriteLine("---------------------------------------");
+    Console.WriteLine("Erros cometidos: " + contadorDeErros + " Erros");
+    Console.Write("CHUTES: ");
 
-    Console.WriteLine(letra);
-    Console.ReadLine();
+    for (int contadorLetras = 0; contadorLetras < 7; contadorLetras++)
+    {
+        Console.Write(letraCorreta[contadorLetras]);
+    }
+
+    Console.WriteLine("\n---------------------------------------");
+    Console.Write("DIGITE UMA LETRA: ");
+    char chute = Convert.ToChar(Console.ReadLine());
+
+    bool letraFoiEncontrada = false;
+
+    for (int contadorPalavraCorreta = 0; contadorPalavraCorreta < palavraSecreta.Length; contadorPalavraCorreta++)
+    {
+
+        char letraCorretaAtual = palavraSecreta[contadorPalavraCorreta];
+
+        if (chute == letraCorretaAtual)
+        {
+            letraCorreta[contadorPalavraCorreta] = chute;
+            letraFoiEncontrada = true;
+        }
+    }
+
+    if (!letraFoiEncontrada)
+    {
+        contadorDeErros++;
+    }
+
+    string letrasCorretasCompletas = string.Join("", letraCorreta);
+
+    if (palavraSecreta == letrasCorretasCompletas)
+    {
+        jogadorAcertou = true;
+        Console.WriteLine($"Parabens, VOCÊ ACERTOU! A Palavra secreta era: {palavraSecreta}");
+    }
+if (contadorDeErros > 5)
+{
+    jogadorPerdeu = true;
+    Console.WriteLine($"Que Pena, você ERROU! a palavra correta era: {palavraSecreta}");
 }
+
+}
+
+Console.WriteLine("Digite ENTER PARA SAIR...");
+Console.ReadLine();
