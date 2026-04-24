@@ -1,5 +1,5 @@
 # Jogo da Forca
-![](./.docs/rRMW3Js.gif)
+![](./.Docs/rRMW3Js.gif)
 
 ## Introdução
 
